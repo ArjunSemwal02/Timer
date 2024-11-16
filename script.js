@@ -12,7 +12,7 @@ const startTimerElement = document.getElementById('startTimer');
 
 
 
-let targetTime = 454643735737857;
+let targetTime;
 let timerInterval;
 
 
@@ -20,6 +20,8 @@ let timerInterval;
 const updateTimer = () => {
     if(targetTime){
         const differenceInSeconds = Math.floor(targetTime - Date.now()) / 1000;
+
+        if(differenceInSeconds < 1)     clearInterval(timerInterval);
         
         const hours = Math.floor(differenceInSeconds / 3600);
         const minutes = Math.floor(differenceInSeconds / 60) % 60;
@@ -31,6 +33,38 @@ const updateTimer = () => {
     }
 }
 
+
+startTimerElement.addEventListener('click', () => {
+    const futureHours = parseInt(hoursInputElement.value);
+    const futureMinutes = parseInt(minutesInputElement.value);
+    const futureSeconds = parseInt(secondsInputElement.value);
+
+    const date = new Date();
+
+    const currentHours = date.getHours();
+    const currentMinutes = date.getMinutes();
+    const currentSeconds = date.getSeconds();
+
+    date.setHours(currentHours + futureHours);
+    date.setMinutes(currentMinutes + futureMinutes);
+    date.setSeconds(currentSeconds + futureSeconds);
+
+    targetTime = date.getTime();
+
+    localStorage.setItem('targetTime', targetTime);
+
+    updateTimer();
+    timerInterval = setInterval(updateTimer,  500);
+})
+
+
+const storedTargetTime = localStorage.getItem('targetTime');
+
+if(storedTargetTime){
+    targetTime = storedTargetTime;
+    updateTimer();
+    timerInterval = setInterval(updateTimer, 500);
+}
 
 
 updateTimer();

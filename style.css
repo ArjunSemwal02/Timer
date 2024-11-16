@@ -1,13 +1,13 @@
 body{
-    margin: 3rem;
+    padding: 3rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: white;
     background-color: rgb(152, 203, 237);
     box-sizing: border-box;
 }
 .container{
-    margin: 5rem;
-    padding: 2rem;
+    margin: 2rem;
+    padding: 4rem;
     background-color: rgb(208, 160, 146);
     box-shadow: 0 8px 8px rgba(0, 0, 0, .3);
     display: flex;
