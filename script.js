@@ -35,6 +35,7 @@ const updateTimer = () => {
 
 
 startTimerElement.addEventListener('click', () => {
+    clearInterval(timerInterval);
     const futureHours = parseInt(hoursInputElement.value);
     const futureMinutes = parseInt(minutesInputElement.value);
     const futureSeconds = parseInt(secondsInputElement.value);
@@ -58,13 +59,10 @@ startTimerElement.addEventListener('click', () => {
 })
 
 
-const storedTargetTime = localStorage.getItem('targetTime');
+// const storedTargetTime = localStorage.getItem('targetTime');
 
-if(storedTargetTime){
-    targetTime = storedTargetTime;
-    updateTimer();
-    timerInterval = setInterval(updateTimer, 500);
-}
-
-
-updateTimer();
+// if(storedTargetTime){
+//     targetTime = storedTargetTime;
+//     updateTimer();
+//     timerInterval = setInterval(updateTimer, 500);
+// }
