@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Timer</h1>
+    <div class="container">
+        <div class="inputs">
+            <label for="hoursInput">Hour:</label>
+            <input type="text" id="hoursInput" min="0" value="0">
+
+            <label for="minutesInput">Minutes:</label>
+            <input type="text" id="minutesInput" min="0" value="0">
+
+            <label for="secondsInput">Seconds:</label>
+            <input type="text" id="secondsInput" min="0" value="0">
+            <button id="startTimer">Start</button>
+        </div>
+        
+        <div class="timer">
+            <div id="hoursOutput"></div>
+            <div id="minutesOutput"></div>
+            <div id="secondsOutput"></div>
+        </div>
+        
+    </div>
+</body>
+</html>

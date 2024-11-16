@@ -1,0 +1,46 @@
+body{
+    margin: 3rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    background-color: rgb(152, 203, 237);
+    box-sizing: border-box;
+}
+.container{
+    margin: 5rem;
+    padding: 2rem;
+    background-color: rgb(208, 160, 146);
+    box-shadow: 0 8px 8px rgba(0, 0, 0, .3);
+    display: flex;
+    font-size: 1.5rem;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.inputs input{
+    padding: 1rem;
+}
+.inputs button{
+    padding: 1rem;
+    color: white;
+    background-color: darkred;
+    border: 0;
+    font-size: 1.5rem;
+    margin: 1rem auto;
+    border-radius: .3rem;
+    width: 100%;
+    cursor: pointer;
+}
+.inputs button:hover{
+    background-color: rgb(99, 1, 1);
+}
+.timer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    font-size: 3rem;
+    padding: 1rem;
+}
